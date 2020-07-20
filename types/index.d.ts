@@ -27,6 +27,7 @@ export interface MaterialTableProps<RowData extends object> {
     isDeleteHidden?: (rowData: RowData) => boolean;
   };
   icons?: Icons;
+  initialFormData?: object
   isLoading?: boolean;
   title?: string | React.ReactElement<any>;
   options?: Options<RowData>;
@@ -168,7 +169,7 @@ export interface Column<RowData extends object> {
   filterPlaceholder?: string;
   filterCellStyle?: React.CSSProperties;
   grouping?: boolean;
-  groupTitle?: string | ((groupData: any) => any) | React.Node; 
+  groupTitle?: string | ((groupData: any) => any) | React.ReactNode;
   headerStyle?: React.CSSProperties;
   hidden?: boolean;
   hideFilterIcon?: boolean;
